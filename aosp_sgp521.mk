@@ -25,6 +25,7 @@ $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4339
 PRODUCT_COPY_FILES += \
     device/sony/castor/rootdir/logo.rle:root/logo.rle \
     device/sony/castor/rootdir/system/etc/BCM4339.hcd:system/etc/firmware/BCM43xx.hcd \
+    device/sony/castor/rootdir/system/etc/bcmdhd.cal:system/etc/firmware/wlan/bcmdhd/bcmdhd.cal \
     device/sony/castor/rootdir/system/etc/sensors_calib.conf:system/etc/sensors_calib.conf \
     device/sony/castor/rootdir/system/etc/mixer_paths.xml:system/etc/mixer_paths.xml \
     device/sony/castor/rootdir/system/etc/thermanager.xml:system/etc/thermanager.xml \
