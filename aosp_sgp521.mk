@@ -23,7 +23,6 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 #$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4339/device-bcm.mk)
 
 PRODUCT_COPY_FILES += \
-    device/sony/castor/rootdir/logo.rle:root/logo.rle \
     device/sony/castor/rootdir/system/etc/BCM4339.hcd:system/etc/firmware/BCM43xx.hcd \
     device/sony/castor/rootdir/system/etc/wifi/bcmdhd.cal:system/etc/wifi/bcmdhd.cal \
     device/sony/castor/rootdir/system/etc/sensors_calib.conf:system/etc/sensors_calib.conf \
