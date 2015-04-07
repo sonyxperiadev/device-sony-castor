@@ -64,7 +64,8 @@ PRODUCT_COPY_FILES += \
     device/sony/castor/rootdir/system/etc/tfa98xx/FMSpeaker_btm.eq:/system/etc/tfa98xx/FMSpeaker_btm.eq \
     device/sony/castor/rootdir/system/etc/tfa98xx/TFA9890_Receiver.config:/system/etc/tfa98xx/TFA9890_Receiver.config \
     device/sony/castor/rootdir/system/etc/tfa98xx/VoiceCallEarpice_top.preset:/system/etc/tfa98xx/VoiceCallEarpice_top.preset \
-    device/sony/castor/rootdir/system/etc/tfa98xx/VoiceCallEarpice_top.eq:/system/etc/tfa98xx/VoiceCallEarpice_top.eq
+    device/sony/castor/rootdir/system/etc/tfa98xx/VoiceCallEarpice_top.eq:/system/etc/tfa98xx/VoiceCallEarpice_top.eq \
+    device/sony/castor/rootdir/init.castor.usb.rc:root/init.castor.usb.rc
 
 PRODUCT_NAME := aosp_sgp521
 PRODUCT_DEVICE := castor
