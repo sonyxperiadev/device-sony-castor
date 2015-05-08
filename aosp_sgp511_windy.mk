@@ -12,7 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/aosp_sgp511_windy.mk \
-	$(LOCAL_DIR)/aosp_sgp521.mk
+TARGET_KERNEL_CONFIG := aosp_shinano_castor_windy_defconfig
 
+$(call inherit-product, device/sony/castor/aosp_sgp521_common.mk)
+
+PRODUCT_NAME := aosp_sgp511_windy
+PRODUCT_DEVICE := castor
+PRODUCT_MODEL := Xperia Z2 Tablet WiFi(AOSP)
+PRODUCT_BRAND := Sony
+PRODUCT_MANUFACTURER := Sony

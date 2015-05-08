@@ -14,69 +14,11 @@
 
 TARGET_KERNEL_CONFIG := aosp_shinano_castor_defconfig
 
-DEVICE_PACKAGE_OVERLAYS += \
-    device/sony/castor/overlay
-
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony.mk)
-$(call inherit-product, device/sony/shinano/device.mk)
-$(call inherit-product, vendor/sony/castor/castor-vendor.mk)
-$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
-$(call inherit-product, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
-$(call inherit-product-if-exists, prebuilts/chromium/webview_prebuilt.mk)
-$(call inherit-product-if-exists, vendor/google/products/gms.mk)
-
-PRODUCT_COPY_FILES += \
-    device/sony/castor/rootdir/system/etc/BCM4339.hcd:system/etc/firmware/BCM43xx.hcd \
-    device/sony/castor/rootdir/system/etc/wifi/bcmdhd.cal:system/etc/wifi/bcmdhd.cal \
-    device/sony/castor/rootdir/system/etc/sensors_calib.conf:system/etc/sensors_calib.conf \
-    device/sony/castor/rootdir/system/etc/sensor_def_qcomdev.conf:system/etc/sensor_def_qcomdev.conf \
-    device/sony/castor/rootdir/system/etc/thermanager.xml:system/etc/thermanager.xml \
-    device/sony/castor/rootdir/system/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-    device/sony/castor/rootdir/system/etc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
-    device/sony/castor/rootdir/system/etc/mixer_paths.xml:system/etc/mixer_paths.xml
-
-PRODUCT_COPY_FILES += \
-    device/sony/castor/rootdir/system/etc/tfa98xx/coldboot.patch:/system/etc/tfa98xx/coldboot.patch \
-    device/sony/castor/rootdir/system/etc/tfa98xx/TFA9890.patch:/system/etc/tfa98xx/TFA9890.patch \
-    device/sony/castor/rootdir/system/etc/tfa98xx/TFA9890_top.config:/system/etc/tfa98xx/TFA9890_top.config \
-    device/sony/castor/rootdir/system/etc/tfa98xx/TFA9890_btm.config:/system/etc/tfa98xx/TFA9890_btm.config \
-    device/sony/castor/rootdir/system/etc/tfa98xx/btm.speaker:/system/etc/tfa98xx/btm.speaker \
-    device/sony/castor/rootdir/system/etc/tfa98xx/top.speaker:/system/etc/tfa98xx/top.speaker \
-    device/sony/castor/rootdir/system/etc/tfa98xx/HiFiSpeaker_top.preset:/system/etc/tfa98xx/HiFiSpeaker_top.preset \
-    device/sony/castor/rootdir/system/etc/tfa98xx/HiFiSpeaker_btm.preset:/system/etc/tfa98xx/HiFiSpeaker_btm.preset \
-    device/sony/castor/rootdir/system/etc/tfa98xx/HiFiSpeakerRing_top.preset:/system/etc/tfa98xx/HiFiSpeakerRing_top.preset \
-    device/sony/castor/rootdir/system/etc/tfa98xx/HiFiSpeakerRing_btm.preset:/system/etc/tfa98xx/HiFiSpeakerRing_btm.preset \
-    device/sony/castor/rootdir/system/etc/tfa98xx/HiFiSpeakerSforce_top.preset:/system/etc/tfa98xx/HiFiSpeakerSforce_top.preset \
-    device/sony/castor/rootdir/system/etc/tfa98xx/HiFiSpeakerSforce_btm.preset:/system/etc/tfa98xx/HiFiSpeakerSforce_btm.preset \
-    device/sony/castor/rootdir/system/etc/tfa98xx/VoiceCallSpeaker_top.preset:/system/etc/tfa98xx/VoiceCallSpeaker_top.preset \
-    device/sony/castor/rootdir/system/etc/tfa98xx/VoiceCallSpeaker_btm.preset:/system/etc/tfa98xx/VoiceCallSpeaker_btm.preset \
-    device/sony/castor/rootdir/system/etc/tfa98xx/FMSpeaker_top.preset:/system/etc/tfa98xx/FMSpeaker_top.preset \
-    device/sony/castor/rootdir/system/etc/tfa98xx/FMSpeaker_btm.preset:/system/etc/tfa98xx/FMSpeaker_btm.preset \
-    device/sony/castor/rootdir/system/etc/tfa98xx/HiFiSpeaker_top.eq:/system/etc/tfa98xx/HiFiSpeaker_top.eq \
-    device/sony/castor/rootdir/system/etc/tfa98xx/HiFiSpeaker_btm.eq:/system/etc/tfa98xx/HiFiSpeaker_btm.eq \
-    device/sony/castor/rootdir/system/etc/tfa98xx/HiFiSpeakerRing_top.eq:/system/etc/tfa98xx/HiFiSpeakerRing_top.eq \
-    device/sony/castor/rootdir/system/etc/tfa98xx/HiFiSpeakerRing_btm.eq:/system/etc/tfa98xx/HiFiSpeakerRing_btm.eq \
-    device/sony/castor/rootdir/system/etc/tfa98xx/HiFiSpeakerSforce_top.eq:/system/etc/tfa98xx/HiFiSpeakerSforce_top.eq \
-    device/sony/castor/rootdir/system/etc/tfa98xx/HiFiSpeakerSforce_btm.eq:/system/etc/tfa98xx/HiFiSpeakerSforce_btm.eq \
-    device/sony/castor/rootdir/system/etc/tfa98xx/VoiceCallSpeaker_top.eq:/system/etc/tfa98xx/VoiceCallSpeaker_top.eq \
-    device/sony/castor/rootdir/system/etc/tfa98xx/VoiceCallSpeaker_btm.eq:/system/etc/tfa98xx/VoiceCallSpeaker_btm.eq \
-    device/sony/castor/rootdir/system/etc/tfa98xx/FMSpeaker_top.eq:/system/etc/tfa98xx/FMSpeaker_top.eq \
-    device/sony/castor/rootdir/system/etc/tfa98xx/FMSpeaker_btm.eq:/system/etc/tfa98xx/FMSpeaker_btm.eq \
-    device/sony/castor/rootdir/system/etc/tfa98xx/TFA9890_Receiver.config:/system/etc/tfa98xx/TFA9890_Receiver.config \
-    device/sony/castor/rootdir/system/etc/tfa98xx/VoiceCallEarpice_top.preset:/system/etc/tfa98xx/VoiceCallEarpice_top.preset \
-    device/sony/castor/rootdir/system/etc/tfa98xx/VoiceCallEarpice_top.eq:/system/etc/tfa98xx/VoiceCallEarpice_top.eq
+$(call inherit-product, device/sony/castor/aosp_sgp521_common.mk)
 
 PRODUCT_NAME := aosp_sgp521
 PRODUCT_DEVICE := castor
 PRODUCT_MODEL := Xperia Z2 Tablet (AOSP)
 PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony
-
-PRODUCT_AAPT_CONFIG := xlarge
-PRODUCT_AAPT_PREBUILT_DPI := xhdpi hdpi
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=320 \
-    ro.usb.pid_suffix=1B1
