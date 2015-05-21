@@ -14,7 +14,7 @@
 
 include device/sony/shinano/BoardConfig.mk
 
-TARGET_BOOTLOADER_BOARD_NAME := D6503
+TARGET_BOOTLOADER_BOARD_NAME := SGP521
 
 BOARD_SYSTEMIMAGE_PARTITION_SIZE   := 2436890624
 #Reserve space for data encryption (12253605888-16384)
