@@ -65,11 +65,11 @@ PRODUCT_COPY_FILES += \
     device/sony/castor/rootdir/system/etc/tfa98xx/VoiceCallEarpice_top.eq:/system/etc/tfa98xx/VoiceCallEarpice_top.eq
 
 PRODUCT_AAPT_CONFIG := xlarge
-PRODUCT_AAPT_PREBUILT_DPI := xhdpi hdpi
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
+PRODUCT_AAPT_PREBUILT_DPI := hdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 PRODUCT_CHARACTERISTICS := tablet
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=320 \
+    ro.sf.lcd_density=240 \
     ro.usb.pid_suffix=1B1
