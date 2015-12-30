@@ -23,3 +23,6 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 12253589504
 #BOARD_KERNEL_CMDLINE += mem=2688M@255M
 
 PRODUCT_VENDOR_KERNEL_HEADERS += device/sony/castor/kernel-headers
+
+TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/clearpad/wakeup_gesture"
+TARGET_TAP_TO_WAKE_STRING := true
