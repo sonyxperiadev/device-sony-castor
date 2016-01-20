@@ -17,6 +17,10 @@ TARGET_KERNEL_CONFIG := aosp_shinano_castor_defconfig
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony.mk)
 $(call inherit-product, device/sony/castor/aosp_sgp521_common.mk)
 
+# NFC config
+PRODUCT_PACKAGES += nfc_nci.castor
+ADDITIONAL_DEFAULT_PROPERTIES += ro.hardware.nfc_nci=castor
+
 PRODUCT_NAME := aosp_sgp521
 PRODUCT_DEVICE := castor
 PRODUCT_MODEL := Xperia Z2 Tablet (AOSP)
