@@ -16,6 +16,7 @@ DEVICE_PACKAGE_OVERLAYS += \
     device/sony/castor/overlay
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+$(call inherit-product, device/sony/common/common.mk)
 $(call inherit-product, device/sony/shinano/device.mk)
 $(call inherit-product, vendor/sony/castor/castor-vendor.mk)
 $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
