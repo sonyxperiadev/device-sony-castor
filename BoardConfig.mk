@@ -12,8 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include device/sony/shinano/BoardConfig.mk
-include device/sony/common/CommonConfig.mk
+include device/sony/castor_windy/BoardConfigCommon.mk
 
 TARGET_BOOTLOADER_BOARD_NAME := SGP521
 
@@ -22,7 +21,3 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE   := 2436890624
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 12253589504
 
 BOARD_KERNEL_CMDLINE += androidboot.hardware=castor
-
-PRODUCT_VENDOR_KERNEL_HEADERS += device/sony/castor/kernel-headers
-
-TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/clearpad/wakeup_gesture"

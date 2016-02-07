@@ -14,4 +14,3 @@
 
 PRODUCT_MAKEFILES := \
 	$(LOCAL_DIR)/aosp_sgp521.mk
-
