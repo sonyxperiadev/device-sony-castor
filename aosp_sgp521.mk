@@ -14,8 +14,7 @@
 
 TARGET_KERNEL_CONFIG := aosp_shinano_castor_defconfig
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
-$(call inherit-product, device/sony/castor_windy/aosp_sgp5xx_common.mk)
+PRODUCT_COPY_FILES := \
 
 # Device Init
 PRODUCT_PACKAGES += \
@@ -34,6 +33,10 @@ PRODUCT_PACKAGES += \
 # NFC config
 PRODUCT_PACKAGES += \
     nfc_nci.castor
+
+# Inherit from those products. Most specific first.
+$(call inherit-product, device/sony/castor_windy/aosp_sgp5xx_common.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 PRODUCT_NAME := aosp_sgp521
 PRODUCT_DEVICE := castor
