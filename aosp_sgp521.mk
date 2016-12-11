@@ -12,10 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Device paths
+COMMON_PATH := device/sony/common
+PLATFORM_COMMON_PATH := device/sony/shinano
+BOARD_COMMON_PATH := device/sony/castor_windy
+DEVICE_PATH := device/sony/castor
+
 TARGET_KERNEL_CONFIG := aosp_shinano_castor_defconfig
 
 DEVICE_PACKAGE_OVERLAYS += \
-    device/sony/castor/overlay
+    $(DEVICE_PATH)/overlay
 
 # Device Specific Permissions
 PRODUCT_COPY_FILES := \
@@ -45,7 +51,7 @@ PRODUCT_PACKAGES += \
     Stk
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, device/sony/castor_windy/aosp_sgp5xx_common.mk)
+$(call inherit-product, $(BOARD_COMMON_PATH)/aosp_sgp5xx_common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 PRODUCT_NAME := aosp_sgp521
