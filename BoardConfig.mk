@@ -12,7 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include device/sony/castor_windy/BoardConfigCommon.mk
+# Device paths
+COMMON_PATH := device/sony/common
+PLATFORM_COMMON_PATH := device/sony/shinano
+BOARD_COMMON_PATH := device/sony/castor_windy
+DEVICE_PATH := device/sony/castor
+
+include $(BOARD_COMMON_PATH)/BoardConfigCommon.mk
 
 TARGET_BOOTLOADER_BOARD_NAME := SGP521
 
