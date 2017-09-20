@@ -17,7 +17,11 @@ include device/sony/castor_windy/BoardConfigCommon.mk
 TARGET_BOOTLOADER_BOARD_NAME := SGP521
 
 BOARD_SYSTEMIMAGE_PARTITION_SIZE   := 2436890624
+
 #Reserve space for data encryption (12253605888-16384)
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 12253589504
 
 BOARD_KERNEL_CMDLINE += androidboot.hardware=castor
+
+# Recovery config
+BOARD_SONY_INIT_FLAGS += -DDEV_BLOCK_FOTA_NUM="16"
